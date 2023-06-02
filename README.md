@@ -17,7 +17,7 @@
 
 - Alya Salsa Nabila Mulyadi: Testing manual dan automation modul Menu Admin - User Management - Users - Delete User, Menu Admin - Organization, Menu Admin - Organization - Add Locations.
 
-## Link gdocs Test Plan
+## Link Gdocs Test Plan
 https://docs.google.com/document/d/1fiqTrgudhsrts9h2HXgBtvWF6JTm6dyPry0tbTmhJbs/edit?usp=sharing
 
 ## Link Spreadsheet Test Case
