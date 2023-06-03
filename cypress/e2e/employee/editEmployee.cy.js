@@ -1,6 +1,6 @@
 import baseAddEmployee from "../../support/PageObject/employee/baseAddEmployee.cy.js"
 
-describe('add employee', () => {
+describe('edit employee', () => {
 
     it('success edit employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
