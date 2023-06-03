@@ -1,7 +1,7 @@
 import baseAddEmployee from "../../support/PageObject/employee/baseAddEmployee.cy.js"
 
 describe('add employee', () => {
-    it('success add customer', () => {
+    it('success add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -24,7 +24,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('empty first name add customer', () => {
+    it('empty first name add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -47,7 +47,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('empty last name add customer', () => {
+    it('empty last name add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -70,7 +70,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('empty username add customer', () => {
+    it('empty username add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -93,7 +93,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('empty password add customer', () => {
+    it('empty password add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -116,7 +116,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('empty confirm password add customer', () => {
+    it('empty confirm password add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -139,7 +139,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('employee more than 10 character add customer', () => {
+    it('employee more than 10 character add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -163,7 +163,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('Enter an existing username add customer', () => {
+    it('Enter an existing username add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -186,7 +186,7 @@ describe('add employee', () => {
       cy.get('.oxd-button--secondary').click()   
     })
 
-    it('confirm password dont match add customer', () => {
+    it('confirm password dont match add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
       cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
