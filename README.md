@@ -24,4 +24,4 @@ https://docs.google.com/document/d/1fiqTrgudhsrts9h2HXgBtvWF6JTm6dyPry0tbTmhJbs/
 https://docs.google.com/spreadsheets/d/1v9ppilWsPZRzW9-LCu-QXb1ZFtggT9nVzgnaDKPBT1o/edit?usp=sharing
 
 ## Link Capture Dokumentasi
-
+https://drive.google.com/drive/folders/1YquQkFD82Gz8Z9jQ-iGEwAPqEoexOoXM?usp=sharing

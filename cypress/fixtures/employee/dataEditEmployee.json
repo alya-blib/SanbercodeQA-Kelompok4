@@ -1,0 +1,17 @@
+{
+    "usenameLogin": "admin",
+    "passwordInput": "admin123",
+    "dashboard": "Dashboard",
+    "driversLicenseNumber": "308553",
+    "licenseExpiryDate": "2025-06-06",
+    "sinNumber": "212259",
+    "dateOfBirth": "2000-08-08",
+    "success": "Successfully Updated",
+    "file": "cypress/fixtures/template.rtf",
+    "comment": "blablabla",
+    "required": "Required",
+    "moreCharacter": "Should not exceed 10 characters",
+    "driversMore": "308533333333333333333333333333333",
+    "moreThanCharacter": "Should not exceed 30 characters",
+    "sinMore": "212259999999999999999999999999999"
+}
