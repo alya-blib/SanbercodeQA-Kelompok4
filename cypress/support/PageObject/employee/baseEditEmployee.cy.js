@@ -21,6 +21,17 @@ class baseEditEmployee {
     
       return username;
     }
+    generateRandomEmployeeId() {
+      var words = ["alya", "alden", "aurel", "imas", "dedi", "hari", "salsa", "nabila"];
+      var symbols = ["!", "@", "#", "$", "%", "&", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    
+      var randomWordIndex = Math.floor(Math.random() * words.length);
+      var randomSymbolIndex = Math.floor(Math.random() * symbols.length);
+    
+      var employeeId = words[randomWordIndex] + symbols[randomSymbolIndex];
+    
+      return employeeId;
+    }
     usernameInput = ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input"
     passwordInput = ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input"
     loginButton = ".oxd-button"

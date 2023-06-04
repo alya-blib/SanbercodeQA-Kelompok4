@@ -14,6 +14,7 @@ describe('edit employee', () => {
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
+      cy.get(BaseEditEmployee.employeeIdInput).clear().type(BaseEditEmployee.generateRandomEmployeeId())
       cy.get(BaseEditEmployee.DlnInput).clear().type(editEmployeeData.driversLicenseNumber)
       cy.get(BaseEditEmployee.LedInput).clear().type(editEmployeeData.licenseExpiryDate).click()
       cy.get(BaseEditEmployee.SinnInput).clear().type(editEmployeeData.sinNumber)
