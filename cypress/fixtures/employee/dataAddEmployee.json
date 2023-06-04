@@ -1,0 +1,15 @@
+{
+    "usenameInput": "admin",
+    "passwordInput": "admin123",
+    "dashboard": "Dashboard",
+    "firstNameInput": "aiden",
+    "file": "cypress/fixtures/art.jpg",
+    "middleNameInput": "arsaka",
+    "lastNameInput": "mulyadi",
+    "success": "Successfully Saved",
+    "required": "Required",
+    "passwordDontMatch" : "Passwords do not match",
+    "moreCharacter": "Should not exceed 10 characters",
+    "usernameAlready": "Username already exists",
+    "confirmPassword": "admin12345"
+}
