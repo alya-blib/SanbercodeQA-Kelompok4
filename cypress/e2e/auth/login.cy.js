@@ -1,14 +1,11 @@
 import baseLogin from "../../support/PageObject/auth/baseLogin.cy.js"
 const loginData = require("../../fixtures/auth/dataLogin.json")
+import '../../support/commands.js'
 
 describe('Login', () => {
   const BaseLogin = new baseLogin()
     it('success login', () => {
-      cy.visit('https://opensource-demo.orangehrmlive.com/')
-      cy.get(BaseLogin.usernameInput).type(loginData.usernameInput)
-      cy.get(BaseLogin.passwordInput).type(loginData.passwordInput)
-      cy.get(BaseLogin.loginButton).click()
-      cy.get(BaseLogin.beVisibleImg).should(loginData.beVisible)
+      cy.login();
     })
     it('empty password login', () => {
         cy.visit('https://opensource-demo.orangehrmlive.com/')

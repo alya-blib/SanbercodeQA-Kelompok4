@@ -1,16 +1,13 @@
 import { add } from "lodash"
 import baseAddEmployee from "../../support/PageObject/employee/baseAddEmployee.cy.js"
 const addEmployeeData = require("../../fixtures/employee/dataAddEmployee.json")
+import '../../support/commands.js'
 
 describe('add employee', () => {
+  const BaseAddEmployee = new baseAddEmployee()
     it('success add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -30,13 +27,8 @@ describe('add employee', () => {
     })
 
     it('empty first name add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -55,14 +47,8 @@ describe('add employee', () => {
     })
 
     it('empty last name add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
-
+      cy.login();
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
       cy.get(BaseAddEmployee.selectFoto).selectFile(addEmployeeData.file, {force: true})
@@ -80,13 +66,8 @@ describe('add employee', () => {
     })
 
     it('empty username add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -105,13 +86,8 @@ describe('add employee', () => {
     })
 
     it('empty password add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -131,13 +107,8 @@ describe('add employee', () => {
     })
 
     it('empty confirm password add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -156,13 +127,8 @@ describe('add employee', () => {
     })
 
     it('id employee more than 10 character add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -182,13 +148,8 @@ describe('add employee', () => {
     })
 
     it('Enter an existing username add employee', () => {
-      const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()
@@ -209,11 +170,7 @@ describe('add employee', () => {
     it('confirm password dont match add employee', () => {
       const BaseAddEmployee = new baseAddEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseAddEmployee.usernameInput).type(addEmployeeData.usenameInput)
-      cy.get(BaseAddEmployee.passwordInput).type(addEmployeeData.passwordInput)
-      cy.get(BaseAddEmployee.loginButton).click()
-      cy.get(BaseAddEmployee.dashboard).should('contain.text', addEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseAddEmployee.pimButton).click()
       cy.get(BaseAddEmployee.addButton).click()

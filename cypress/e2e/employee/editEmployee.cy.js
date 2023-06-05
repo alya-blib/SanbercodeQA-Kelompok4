@@ -1,16 +1,13 @@
 import baseEditEmployee from "../../support/PageObject/employee/baseEditEmployee.cy.js"
 const editEmployeeData = require("../../fixtures/employee/dataEditEmployee.json")
+import '../../support/commands.js'
 
 describe('edit employee', () => {
 
+  const BaseEditEmployee = new baseEditEmployee()
     it('success edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
@@ -40,13 +37,8 @@ describe('edit employee', () => {
     })
 
     it('empty first name edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
@@ -74,13 +66,8 @@ describe('edit employee', () => {
     })
 
     it('empty last name edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
@@ -108,13 +95,8 @@ describe('edit employee', () => {
     })
 
     it('employee id more than 10 edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
@@ -141,13 +123,8 @@ describe('edit employee', () => {
       cy.get(BaseEditEmployee.saveButton3).click()
     })
     it('Drivers License Number more than 30 character edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()
@@ -173,13 +150,8 @@ describe('edit employee', () => {
       cy.get(BaseEditEmployee.saveButton3).click()
     })
     it('SIN Number more than 30 character edit employee', () => {
-      const BaseEditEmployee = new baseEditEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseEditEmployee.usernameInput).type(editEmployeeData.usenameLogin)
-      cy.get(BaseEditEmployee.passwordInput).type(editEmployeeData.passwordInput)
-      cy.get(BaseEditEmployee.loginButton).click()
-      cy.get(BaseEditEmployee.dashboard).should('contain.text', editEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseEditEmployee.pimButton).click()
       cy.get(BaseEditEmployee.editKlik).click()

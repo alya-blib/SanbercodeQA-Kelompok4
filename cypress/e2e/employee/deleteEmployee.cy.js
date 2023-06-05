@@ -1,15 +1,12 @@
 import baseDeteleEmployee from "../../support/PageObject/employee/baseDeteleEmployee.cy.js"
 const deleteEmployeeData = require("../../fixtures/employee/dataDeleteEmployee.json")
+import '../../support/commands.js'
 
 describe('delete employee', () => {
+  const BaseDeteleEmployee = new baseDeteleEmployee()
     it('success delete employee', () => {
-      const BaseDeteleEmployee = new baseDeteleEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseDeteleEmployee.usernameInput).type(deleteEmployeeData.usenameLogin)
-      cy.get(BaseDeteleEmployee.passwordInput).type(deleteEmployeeData.passwordInput)
-      cy.get(BaseDeteleEmployee.loginButton).click()
-      cy.get(BaseDeteleEmployee.dashboard).should('contain.text', deleteEmployeeData.dashboard)
+      cy.login();
 
       cy.get(BaseDeteleEmployee.pimButton).click()
       cy.get(BaseDeteleEmployee.deleteButton).click({force: true})
@@ -18,14 +15,8 @@ describe('delete employee', () => {
     })
 
     it('cancel delete employee', () => {
-      const BaseDeteleEmployee = new baseDeteleEmployee()
     // login
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-      cy.get(BaseDeteleEmployee.usernameInput).type(deleteEmployeeData.usenameLogin)
-      cy.get(BaseDeteleEmployee.passwordInput).type(deleteEmployeeData.passwordInput)
-      cy.get(BaseDeteleEmployee.loginButton).click()
-      cy.get(BaseDeteleEmployee.dashboard).should('contain.text', deleteEmployeeData.dashboard)
-
+      cy.login();
       cy.get(BaseDeteleEmployee.pimButton).click()
       cy.get(BaseDeteleEmployee.deleteButton).click({force: true})
       cy.get(BaseDeteleEmployee.buttonCancel).click()
